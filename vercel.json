@@ -17,6 +17,10 @@
             "src": "/img/upcoming/(.*)",
             "dest": "public/img/upcoming/$1"
         },
+        {
+            "src": "/img/icon/(.*)",
+            "dest": "public/img/icon/$1"
+        },
         { "src": "/build/(.*)", "dest": "public/build/" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
