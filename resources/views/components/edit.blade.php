@@ -1,0 +1,1 @@
+<a href="{{ $route }}" {{ $attributes->merge(['class' => 'text-white btn btn-warning w-100 mt-2'])}}>{{ $slot }}</a>
