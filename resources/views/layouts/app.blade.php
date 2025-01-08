@@ -16,7 +16,7 @@
     <!-- Scripts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link rel="icon" type="image/png" href="{{ asset('gameicon.png') }}">
     <style>
         *,
         html,
@@ -26,44 +26,48 @@
             box-sizing: border-box;
         }
 
-        .banner{
+        .banner {
             border: 5px #ffffff solid;
             transition: .2s;
             cursor: pointer;
         }
 
-        .banner:hover{
-            border:5px wheat solid;
+        .banner:hover {
+            border: 5px wheat solid;
         }
-        .carousel-control-next, .carousel-control-prev{
-            width:50px; 
-            height:80px;
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            width: 50px;
+            height: 80px;
         }
-        .carousel-control-next{
+
+        .carousel-control-next {
             margin-right: -50px;
         }
-        .carousel-control-prev{
+
+        .carousel-control-prev {
             margin-left: -50px;
         }
 
-        .carousel-indicators{
+        .carousel-indicators {
             margin-bottom: -30px;
         }
-        
-        #gameCarousel .carousel-item{
+
+        #gameCarousel .carousel-item {
             height: 380px;
         }
 
-        #gameCarousel2 img{
+        #gameCarousel2 img {
             height: 280px;
             object-fit: fill;
         }
 
-        #gameCarousel2 .card-body, #gameCarousel3 .card-body{
+        #gameCarousel2 .card-body,
+        #gameCarousel3 .card-body {
             background-size: cover;
-            background-image: url({{asset('img/background-image/bg.jpg')}});
+            background-image: url({{ asset('img/background-image/bg.jpg') }});
         }
-
     </style>
 </head>
 

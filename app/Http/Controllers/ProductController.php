@@ -19,7 +19,10 @@ class ProductController extends Controller
         $today = today()->format('Y-m-d');
 
         $cart = Cart::where('user_id', Auth::id())->get();
-        $products = Product::where('name', 'LIKE', "%$search%")->where('release_date', '<=', $today)->paginate(8);
+        $products = Product::with('category')
+        ->where('name', 'LIKE', "%$search%")
+        ->where('release_date', '<=', $today)
+        ->paginate(8);
 
         return view('product.product', compact(['products', 'cart']));
     }

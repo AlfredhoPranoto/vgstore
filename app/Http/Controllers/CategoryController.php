@@ -46,7 +46,7 @@ class CategoryController extends Controller
         $today = today()->format('Y-m-d');
         $cart = Cart::where('user_id', Auth::id())->get();
 
-        $products = Product::where('category_id', $id)->where('name', 'LIKE', "%$search%")->
+        $products = Product::with('category')->where('category_id', $id)->where('name', 'LIKE', "%$search%")->
         where('release_date','<=',$today)->paginate(perPage: 8);
 
         return view('product.product', compact(['products','cart']));
@@ -77,7 +77,7 @@ class CategoryController extends Controller
     public function destroy(Category $category, $id)
     {
         $category = Category::findOrFail($id);
-        
+
         $category->delete();
 
         return redirect(route('category.index'));

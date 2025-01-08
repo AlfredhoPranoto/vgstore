@@ -31,7 +31,7 @@
                 </x-dropdown>
             @endauth
             @guest
-                <x-dropdown :name="'guest@lalada.com'">
+                <x-dropdown :name="'guest'">
                     <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                     <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
                 </x-dropdown>

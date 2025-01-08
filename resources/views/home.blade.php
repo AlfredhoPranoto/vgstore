@@ -2,7 +2,7 @@
     @slot('title', 'Home')
     <x-slot name="fluid">
         <div class="row d-flex flex-column text-center text-white justify-content-center align-items-center"
-            style="height:91vh;background-size: cover; background-image: url({{ asset('img/background-image/main-bg.jpg') }}">
+            style="height:92vh;background-size: cover; background-image: url({{ asset('img/background-image/main-bg.jpg') }}">
             <div class="w-50 p-4" style="background-image: url({{ asset('img/background-image/black-bg.jpeg') }}">
                 <h1>Welcome to VGStore</h1>
                 <h3>
@@ -72,7 +72,7 @@
             <div class="col-md-12 mb-5">
                 <h3 class="p-0 mb-3 text-white">Special Offers</h3>
                 <x-carousel-card>
-                    
+
                 </x-carousel-card>
             </div>
         </div>
