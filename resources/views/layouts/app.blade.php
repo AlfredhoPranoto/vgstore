@@ -59,7 +59,7 @@
         }
 
         #gameCarousel2 img {
-            height: 280px;
+            height: 400px;
             object-fit: fill;
         }
 
@@ -89,7 +89,7 @@
                 </div>
             @endif
 
-            <div class="container">
+            <div class="container" style="max-width: 1260px">
                 {{ $slot }}
             </div>
         </main>
